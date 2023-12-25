@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Porfolio</title>
+</head>
+
+<body>
+    <div id="loader">
+        <div id="wrapperload">
+            <div class="elem"><h1>Ahmad Raza</h1></div>
+            <div class="elem"><h2>UI/UX Developer</h2></div>
+            <div class="elem"><h2>Happy to see you There!</h2></div>
+            <div class="elem"><h2>Let's Go 💀</h2></div>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar">
+            <img src="logo.png" alt="logo">
+            <div class="links">
+                <a class="navitems" href="#">Home</a>
+                <a class="navitems" href="#">Contact</a>
+                <i class="navitems ri-search-line"></i>
+                <i id="menu" class="navitems ri-menu-line"></i>
+            </div>
+        </nav>
+        <div id="section">
+            <div id="left">
+                <div id="smline"></div>
+                <h2 class="leftitem">Hello I am 👋</h2>
+                <img class="leftitem" id="name" src="./modernAnimatedPortfolioWebsite/imgs/name.png" alt="name">
+                <!-- <img src="" alt=""> -->
+                <h4 class="leftitem">a Developer from <span>pakistan</span></h4>
+                <div class="leftitem" id="mlay">
+                    <img id="playButton" src="modernAnimatedPortfolioWebsite/imgs/playButton.png" alt="playButton">
+                    <h5>see my work <span>profile</span></h5>
+                </div>
+                <div id="contact" class="leftitem">
+                    <h6 class="n1">contact me</h6>
+                    <h6>Email : <span>someone@email.com</span></h6>
+                    <h6>Phone No: <span>+92 300 000000</span></h6>
+                </div>
+            </div>
+            <div id="right">
+                <img src="modernAnimatedPortfolioWebsite/imgs/mainImage.png" alt=" mainImage">
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        var menu = document.querySelector('#menu');
+        var bg = document.querySelector('.container');
+        var isScaled = false; // flag to track the state
+    
+        menu.addEventListener('click', function () {
+            if (!isScaled) {
+                bg.style.transform = 'scale(.8)';
+                bg.style.borderRadius = '10px';
+                bg.style.boxShadow = '0 150px 45px -100px rgba(0,0,0,0.2)';
+                isScaled = true;
+            } else {
+                bg.style.transform = 'scale(1)';
+                bg.style.borderRadius = '0';
+                bg.style.boxShadow = 'none';
+                isScaled = false;
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
